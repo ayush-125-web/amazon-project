@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone - Checkout</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="logo-link">
+          <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" class="logo-img" 
+               onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="logo-text" style="display:none; font-size:1.5rem; font-weight:bold; color:#ff9900;">Amazon</span>
+        </a>
+        <div class="location">
+          <span class="small-text">Deliver to</span>
+          <span class="bold-text">Your Location</span>
+        </div>
+      </div>
+      <div class="header-center">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search in your cart"
+        />
+        <button class="search-button">Search</button>
+      </div>
+      <div class="header-right">
+        <div class="account">
+          <span class="small-text">Hello, Sign in</span>
+          <span class="bold-text">Account & Lists</span>
+        </div>
+        <a class="cart" href="checkout.html">
+          <span class="cart-count" id="cartCount">0</span>
+          <span class="cart-icon">🛒</span>
+          <span class="bold-text">Cart</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main checkout-main">
+      <section class="checkout-content">
+        <div class="cart-items">
+          <h2>Shopping Cart</h2>
+          <div id="cartItemsContainer" class="cart-items-container"></div>
+        </div>
+
+        <aside class="summary">
+          <h3>Order Summary</h3>
+          <div class="delivery-options">
+            <h4>Choose delivery date</h4>
+            <label>
+              <input
+                type="radio"
+                name="delivery"
+                value="standard"
+                data-fee="0"
+                checked
+              />
+              Standard (5–7 days) - Free
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="delivery"
+                value="fast"
+                data-fee="80"
+              />
+              Fast (2–3 days) - ₹80
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="delivery"
+                value="express"
+                data-fee="150"
+              />
+              Express (Tomorrow) - ₹150
+            </label>
+          </div>
+
+          <div class="price-breakdown">
+            <div class="row">
+              <span>Items subtotal</span>
+              <span id="itemsSubtotal">₹0.00</span>
+            </div>
+            <div class="row">
+              <span>Shipping</span>
+              <span id="shippingFee">₹0.00</span>
+            </div>
+            <div class="row">
+              <span>Estimated tax (10%)</span>
+              <span id="taxAmount">₹0.00</span>
+            </div>
+            <div class="row total-row">
+              <span>Order total</span>
+              <span id="orderTotal">₹0.00</span>
+            </div>
+          </div>
+          <button class="primary-button full-width" id="placeOrderButton">
+            Place your order
+          </button>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Amazon. All rights reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+  </html>
+

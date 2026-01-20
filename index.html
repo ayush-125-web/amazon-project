@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="logo-link">
+          <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" class="logo-img" 
+               onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="logo-text" style="display:none; font-size:1.5rem; font-weight:bold; color:#ff9900;">Amazon</span>
+        </a>
+        <div class="location">
+          <span class="small-text">Deliver to</span>
+          <span class="bold-text">Your Location</span>
+        </div>
+      </div>
+      <div class="header-center">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search for products"
+        />
+        <button class="search-button">Search</button>
+      </div>
+      <div class="header-right">
+        <div class="account">
+          <span class="small-text">Hello, Sign in</span>
+          <span class="bold-text">Account & Lists</span>
+        </div>
+        <a class="cart" href="checkout.html">
+          <span class="cart-count" id="cartCount">0</span>
+          <span class="cart-icon">🛒</span>
+          <span class="bold-text">Cart</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="poster-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide active">
+            <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1200&h=400&fit=crop" alt="Electronics Sale" />
+            <div class="carousel-content">
+              <h2>Electronics Sale</h2>
+              <p>Up to 50% off on all electronics</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop" alt="Fashion Collection" />
+            <div class="carousel-content">
+              <h2>Fashion Collection</h2>
+              <p>Latest trends at amazing prices</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1200&h=400&fit=crop" alt="Home & Kitchen" />
+            <div class="carousel-content">
+              <h2>Home & Kitchen</h2>
+              <p>Transform your living space</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=400&fit=crop" alt="Fitness & Sports" />
+            <div class="carousel-content">
+              <h2>Fitness & Sports</h2>
+              <p>Gear up for your active lifestyle</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=400&fit=crop" alt="Audio & Music" />
+            <div class="carousel-content">
+              <h2>Audio & Music</h2>
+              <p>Premium sound experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+          <span class="indicator" data-slide="3"></span>
+          <span class="indicator" data-slide="4"></span>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <h2>Featured Products</h2>
+        <div class="products-grid" id="productsGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Amazon. All rights reserved.</p>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script src="carousel.js"></script>
+  </body>
+  </html>
+
